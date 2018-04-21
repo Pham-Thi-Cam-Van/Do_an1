@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{C63DF938-0C0E-4D92-93E8-3C53364029A1}</ProjectGuid>
+    <ProjectGuid>{8C0DA1F5-055A-4F43-87AE-D4BE9699C57D}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My1712896</RootNamespace>
   </PropertyGroup>
@@ -78,7 +78,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="do_an1.cpp" />
+    <ClCompile Include="1712896.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
