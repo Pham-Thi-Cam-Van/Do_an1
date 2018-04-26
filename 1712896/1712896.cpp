@@ -96,22 +96,34 @@ void docfile(FILE* &fp)
 				h[0].wcs = wcstok_s(NULL, str, b);
 				k++;
 			}
+			wprintf(L"---THÔNG TIN CỦA SINH VIÊN THỨ %d---\n", i+1);
 			e[i] = h[0].KHOA;
 			a[i].MSSV = h[0].KHOA;
 			Chinh(a[i].MSSV);
 			a[i].HoTen = h[1].KHOA; Chinh(a[i].HoTen);
+			wprintf(L"Họ tên: %ls\n", a[i].HoTen);
 			a[i].Khoa = h[2].KHOA; Chinh(a[i].Khoa);
+			wprintf(L"Khoa: %ls\n", a[i].Khoa);
+			Chinh(h[3].KHOA);
 			a[i].KHoc = Chuyenchuoi(h[3].KHOA);
+			wprintf(L"Khóa học: %d\n", a[i].KHoc);
 			a[i].NgaySinh = h[4].KHOA; Chinh(a[i].NgaySinh);
+			wprintf(L"Ngày sinh: %ls\n", a[i].NgaySinh);
+			wprintf(L"Email: %ls@gmail.com\n", e[i]);
 			a[i].HACN = h[5].KHOA; Chinh(a[i].HACN);
+			wprintf(L"Link ảnh: %ls\n", a[i].HACN);
 			a[i].MTBT = h[6].KHOA; Chinh(a[i].MTBT);
+			wprintf(L"Mô tả bản thân: %ls\n", a[i].MTBT);
 			if (k >= 8){
 				a[i].SoThich1 = h[7].KHOA; Chinh(a[i].SoThich1);
+				wprintf(L"Sở thích : %ls",a[i].SoThich1);
 				if (k >= 9){
 					a[i].SoThich2 = h[8].KHOA; Chinh(a[i].SoThich2);
+					wprintf(L", %ls", a[i].SoThich2);
 				}
 				else wprintf(L"\n");
 			}
+			wprintf(L"\n\n");
 			FILE* fp1;
 			_wfopen_s(&fp1, c[i], L"w, ccs=UTF-8");
 			if (fp1 != NULL)
